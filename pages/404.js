@@ -7,9 +7,9 @@ const NotFound = () => {
 
 	useEffect(() => {
 		setTimeout(() => {
-			// router.go(-1)
-			// router.go(1)
-			router.push('/');
+			// router.go(-1) back
+			// router.go(1) forward
+			router.push('/'); // to home
 		}, 3000);
 	}, []);
 

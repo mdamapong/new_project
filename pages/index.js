@@ -1,4 +1,5 @@
 import styles from '../styles/Home.module.css';
+import Head from 'next/head';
 
 import Link from 'next/link';
 
@@ -6,6 +7,9 @@ export default function Home() {
 	return (
 		<>
 			<div>
+				<Head>
+					<title>Next | Home</title>
+				</Head>
 				<h1 className={styles.title}>Homepage</h1>
 				<p className={styles.text}>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus animi
