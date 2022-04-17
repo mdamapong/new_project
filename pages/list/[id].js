@@ -11,10 +11,25 @@ export const getStaticPaths = async () => {
 		fallback: false,
 	};
 };
-const Details = () => {
+
+export const getStaticProps = async (context) => {
+	const id = context.params.id;
+	const res = await fetch('https://jsonplaceholder.typicode.com/users/' + id);
+	const data = await res.json();
+
+	return {
+		props: { list: data },
+	};
+};
+
+const Details = ({ list }) => {
 	return (
 		<div>
 			<h1>Detail Page</h1>
+			<h1>{list.name}</h1>
+			<p>{list.email}</p>
+			<p>{list.website}</p>
+			<p>{list.address.city}</p>
 		</div>
 	);
 };
