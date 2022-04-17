@@ -1,4 +1,5 @@
 import styles from '../../styles/List.module.css';
+import Link from 'next/link';
 
 export const getStaticProps = async () => {
 	const res = await fetch('https://jsonplaceholder.typicode.com/users');
@@ -9,19 +10,19 @@ export const getStaticProps = async () => {
 	};
 };
 
-const List = ({ list }) => {
+const Lists = ({ list }) => {
 	return (
 		<>
 			<h1>All lists</h1>
 			{list.map((list) => (
-				<div key={list.id}>
+				<Link href={'/list/' + list.id} key={list.id}>
 					<a className={styles.single}>
 						<h3>{list.name}</h3>
 					</a>
-				</div>
+				</Link>
 			))}
 		</>
 	);
 };
 
-export default List;
+export default Lists;
