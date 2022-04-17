@@ -1,16 +1,20 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+.title {
+  color: #333;
+  padding-bottom: 20px;
+  text-align: center;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.text {
+  color: #777;
 }
 
-* {
-  box-sizing: border-box;
+.btn {
+  display: block;
+  width: 150px;
+  padding: 8px 0;
+  margin: 20px auto;
+  background: #4979ff;
+  border-radius: 4px;
+  color: white;
+  text-align: center;
 }
