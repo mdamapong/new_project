@@ -4,7 +4,12 @@ const Navbar = () => {
 	return (
 		<nav>
 			<div className='logo'>
-				<Image src='/Nextjs-logos_black.png' width={128} height={80} />
+				<Image
+					src='/Nextjs-logos_black.png'
+					alt='Log'
+					width={128}
+					height={80}
+				/>
 			</div>
 			<Link href='/'>
 				<a>Home</a>
