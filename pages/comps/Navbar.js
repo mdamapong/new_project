@@ -15,6 +15,9 @@ const Navbar = () => {
 			<Link href='/list'>
 				<a>My Listing</a>
 			</Link>
+			<Link href='/comment'>
+				<a>Comment</a>
+			</Link>
 		</nav>
 	);
 };
