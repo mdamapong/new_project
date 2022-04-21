@@ -22,3 +22,5 @@ export const NewsContextProvider = (props) => {
 		</NewsContext.Provider>
 	);
 };
+
+export default NewsContext;
