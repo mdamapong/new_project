@@ -22,3 +22,7 @@ export const NewsContextProvider = (props) => {
 		</NewsContext.Provider>
 	);
 };
+
+export default () => {
+	return 'Show page working ! ';
+};
