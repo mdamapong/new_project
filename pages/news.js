@@ -34,6 +34,12 @@ function News(props) {
 }
 
 function NewsArticle({ data }) {
+	const [like, setLike] = useState(0),
+		[isLike, setIsLike] = useState(false),
+		onLikeButtonClick = () => {
+			setLike(like + (isLike ? -1 : 1));
+			setIsLike(!isLike);
+		};
 	return (
 		<div className={styles.news}>
 			<a href={data.url}>
@@ -48,6 +54,25 @@ function NewsArticle({ data }) {
 			<a className={styles.btn} href={data.url}>
 				Read more
 			</a>
+			<br />
+			<>
+				<button
+					className={'like-button ' + (isLike ? 'liked' : '')}
+					onClick={onLikeButtonClick}>
+					{'Like'} | {like}
+				</button>
+				<style>{`
+        .like-button {
+            font-size: 1rem;
+            padding: 5px 10px;
+            color:  #585858;
+        }
+        .liked {
+            font-weight: bold;
+            color: #1565c0;
+          }
+      `}</style>
+			</>
 		</div>
 	);
 }
