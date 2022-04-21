@@ -1,6 +1,19 @@
 import React, { createContext, useEffect, useState, useContext } from 'react';
 import axios from 'axios';
 import styles from '../styles/News.module.css';
+import Link from 'next/link';
+import {
+	FacebookShareButton,
+	FacebookIcon,
+	PinterestShareButton,
+	PinterestIcon,
+	RedditShareButton,
+	RedditIcon,
+	WhatsappShareButton,
+	WhatsappIcon,
+	LinkedinShareButton,
+	LinkedinIcon,
+} from 'next-share';
 
 function News(props) {
 	const { data } = useContext(NewsContext);
@@ -8,7 +21,7 @@ function News(props) {
 
 	return (
 		<div>
-			<h1 className={styles.head__text}>News App 👋</h1>
+			<h1 className={styles.head__text}>Top News</h1>
 			<div className={styles.all__news}>
 				{data
 					? data.results.map((news) => (
@@ -23,12 +36,18 @@ function News(props) {
 function NewsArticle({ data }) {
 	return (
 		<div className={styles.news}>
-			<h1 className={styles.news__title}>{data.title}</h1>
+			<a href={data.url}>
+				<h1 className={styles.news__title}>{data.title}</h1>
+			</a>
 			<p className={styles.news__desc}>{data.abstract}</p>
 			<span className={styles.news__author}>{data.subsection}</span> <br />
 			<span className={styles.news__published}>{data.published_date}</span>
 			<br></br>
 			<span className={styles.news__source}>{data.source}</span>
+			<br></br>
+			<a className={styles.btn} href={data.url}>
+				Read more
+			</a>
 		</div>
 	);
 }
@@ -57,8 +76,28 @@ export const NewsContextProvider = (props) => {
 
 export default function news() {
 	return (
-		<NewsContextProvider>
-			<News />
-		</NewsContextProvider>
+		<>
+			<div>
+				<h1>Share</h1>
+				<FacebookShareButton url={'http://localhost:3000'}>
+					<FacebookIcon size={32} round />
+				</FacebookShareButton>
+				<PinterestShareButton url={'http://localhost:3000'}>
+					<PinterestIcon size={32} round />
+				</PinterestShareButton>
+				<RedditShareButton url={'http://localhost:3000'}>
+					<RedditIcon size={32} round />
+				</RedditShareButton>
+				<WhatsappShareButton url={'http://localhost:3000'}>
+					<WhatsappIcon size={32} round />
+				</WhatsappShareButton>
+				<LinkedinShareButton url={'http://localhost:3000'}>
+					<LinkedinIcon size={32} round />
+				</LinkedinShareButton>
+			</div>
+			<NewsContextProvider>
+				<News />
+			</NewsContextProvider>
+		</>
 	);
 }
