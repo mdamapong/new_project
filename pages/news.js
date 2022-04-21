@@ -1,5 +1,6 @@
 import React, { createContext, useEffect, useState, useContext } from 'react';
 import axios from 'axios';
+import styles from '../styles/News.module.css';
 
 function News(props) {
 	const { data } = useContext(NewsContext);
@@ -7,8 +8,8 @@ function News(props) {
 
 	return (
 		<div>
-			<h1 className='head__text'>News App 👋</h1>
-			<div className='all__news'>
+			<h1 className={styles.head__text}>News App 👋</h1>
+			<div className={styles.all__news}>
 				{data
 					? data.results.map((news) => (
 							<NewsArticle data={news} key={news.url} />
@@ -21,13 +22,13 @@ function News(props) {
 
 function NewsArticle({ data }) {
 	return (
-		<div className='news'>
-			<h1 className='news__title'>{data.title}</h1>
-			<p className='news__desc'>{data.abstract}</p>
-			<span className='news__author'>{data.subsection}</span> <br />
-			<span className='news__published'>{data.published_date}</span>
+		<div className={styles.news}>
+			<h1 className={styles.news__title}>{data.title}</h1>
+			<p className={styles.news__desc}>{data.abstract}</p>
+			<span className={styles.news__author}>{data.subsection}</span> <br />
+			<span className={styles.news__published}>{data.published_date}</span>
 			<br></br>
-			<span className='news__source'>{data.source}</span>
+			<span className={styles.news__source}>{data.source}</span>
 		</div>
 	);
 }

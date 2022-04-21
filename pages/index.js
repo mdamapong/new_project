@@ -24,8 +24,8 @@ export default function Home() {
 				</p>
 			</div>
 
-			<Link href='https://find-git-user.vercel.app/'>
-				<a className={styles.btn}>Dev Search</a>
+			<Link href='/news'>
+				<a className={styles.btn}>Go to news</a>
 			</Link>
 		</>
 	);
