@@ -52,9 +52,9 @@ function NewsArticle({ data }) {
 	);
 }
 
-export const NewsContext = createContext();
+const NewsContext = createContext();
 
-export const NewsContextProvider = (props) => {
+const NewsContextProvider = (props) => {
 	const [data, setData] = useState();
 	const apiKey = 'EtGJB6q2wPSgGtt6fBC1yf7RUfjz6kd9';
 
@@ -79,19 +79,24 @@ export default function news() {
 		<>
 			<div>
 				<h1>Share</h1>
-				<FacebookShareButton url={'http://localhost:3000'}>
+				<FacebookShareButton
+					url={'https://new-project-bnmsze951-mdamapong.vercel.app/'}>
 					<FacebookIcon size={32} round />
 				</FacebookShareButton>
-				<PinterestShareButton url={'http://localhost:3000'}>
+				<PinterestShareButton
+					url={'https://new-project-bnmsze951-mdamapong.vercel.app/'}>
 					<PinterestIcon size={32} round />
 				</PinterestShareButton>
-				<RedditShareButton url={'http://localhost:3000'}>
+				<RedditShareButton
+					url={'https://new-project-bnmsze951-mdamapong.vercel.app/'}>
 					<RedditIcon size={32} round />
 				</RedditShareButton>
-				<WhatsappShareButton url={'http://localhost:3000'}>
+				<WhatsappShareButton
+					url={'https://new-project-bnmsze951-mdamapong.vercel.app/'}>
 					<WhatsappIcon size={32} round />
 				</WhatsappShareButton>
-				<LinkedinShareButton url={'http://localhost:3000'}>
+				<LinkedinShareButton
+					url={'https://new-project-bnmsze951-mdamapong.vercel.app/'}>
 					<LinkedinIcon size={32} round />
 				</LinkedinShareButton>
 			</div>
