@@ -1,15 +1,10 @@
 import styles from '../styles/Home.module.css';
 import Head from 'next/head';
-import { NewsContextProvider } from './comps/NewsContext';
 import Link from 'next/link';
-import News from './comps/News';
 
 export default function Home() {
 	return (
 		<>
-			<NewsContextProvider>
-				<News />
-			</NewsContextProvider>
 			<div>
 				<Head>
 					<title>Next | Home</title>
