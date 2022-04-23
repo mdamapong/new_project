@@ -6,17 +6,11 @@ export default function about() {
 			<div>
 				<h1>About</h1>
 				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus animi
-					impedit suscipit architecto, odio inventore nostrum non neque dicta.
-					Quam magni accusantium culpa distinctio tempore iure accusamus,
-					dolorem nobis odit.
+					This is a news api page app that pulling news data from New York Times
+					Dev app website. The collection of most popular news base on The New
+					York Times Company
 				</p>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus animi
-					impedit suscipit architecto, odio inventore nostrum non neque dicta.
-					Quam magni accusantium culpa distinctio tempore iure accusamus,
-					dolorem nobis odit.
-				</p>
+				<p></p>
 			</div>
 		</>
 	);

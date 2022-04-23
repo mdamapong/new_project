@@ -72,6 +72,24 @@ function NewsArticle({ data }) {
             color: #1565c0;
           }
       `}</style>
+				<div>
+					<p>Share this news</p>
+					<FacebookShareButton url={`${data.url}`}>
+						<FacebookIcon size={32} round />
+					</FacebookShareButton>
+					<PinterestShareButton url={`${data.url}`}>
+						<PinterestIcon size={32} round />
+					</PinterestShareButton>
+					<RedditShareButton url={`${data.url}`}>
+						<RedditIcon size={32} round />
+					</RedditShareButton>
+					<WhatsappShareButton url={`${data.url}`}>
+						<WhatsappIcon size={32} round />
+					</WhatsappShareButton>
+					<LinkedinShareButton url={`${data.url}`}>
+						<LinkedinIcon size={32} round />
+					</LinkedinShareButton>
+				</div>
 			</>
 		</div>
 	);
@@ -102,8 +120,11 @@ const NewsContextProvider = (props) => {
 export default function news() {
 	return (
 		<>
+			<NewsContextProvider>
+				<News />
+			</NewsContextProvider>
 			<div>
-				<h1>Share</h1>
+				<h1>Share this site</h1>
 				<FacebookShareButton
 					url={'https://new-project-bnmsze951-mdamapong.vercel.app/'}>
 					<FacebookIcon size={32} round />
@@ -125,9 +146,6 @@ export default function news() {
 					<LinkedinIcon size={32} round />
 				</LinkedinShareButton>
 			</div>
-			<NewsContextProvider>
-				<News />
-			</NewsContextProvider>
 		</>
 	);
 }

@@ -9,19 +9,11 @@ export default function Home() {
 				<Head>
 					<title>Next | Home</title>
 				</Head>
-				<h1 className={styles.title}>Hello World</h1>
-				<p className={styles.text}>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus animi
-					impedit suscipit architecto, odio inventore nostrum non neque dicta.
-					Quam magni accusantium culpa distinctio tempore iure accusamus,
-					dolorem nobis odit.
-				</p>
-				<p className={styles.text}>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus animi
-					impedit suscipit architecto, odio inventore nostrum non neque dicta.
-					Quam magni accusantium culpa distinctio tempore iure accusamus,
-					dolorem nobis odit.
-				</p>
+				<h1 className={styles.title}>
+					Welcome to NewYork Times News collection page
+				</h1>
+				<p className={styles.text}></p>
+				<p className={styles.text}></p>
 			</div>
 
 			<Link href='/news'>
